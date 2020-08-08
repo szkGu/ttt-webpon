@@ -1,1 +1,199 @@
-
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>てぇトレのウェブポンを集計するやつ</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="body">
+    <div class="container">
+      <div class="bg-title"><h1>てぇトレのウェブポンを集計するやつ</h1></div>
+      <textarea class="text-input" id="goods-input" placeholder="メールに記載されている獲得商品一覧をここにコピペしてください。"></textarea>
+      <div>
+        <div id="table">
+          <table>
+            <tbody>
+              <tr>
+                <th>賞</th>
+                <th colspan="2">内容</th>
+                <th>数量</th>
+                <th>小計</th>
+              </tr>
+              <tr>
+                <td class="text-center">激レア</td>
+                <td colspan="2">メッセージ動画</td>
+                <td class="text-right" id="TTT_SR01">0</td>
+                <td class="text-right" id="TTT_SR">0</td>
+              </tr>
+              <tr>
+                <td class="text-center">レア</td>
+                <td colspan="2">キャンバスアート</td>
+                <td class="text-right" id="TTT_R01">0</td>
+                <td class="text-right" id="TTT_R">0</td>
+              </tr>
+              <tr>
+                <td class="text-center" rowspan="4">A</td>
+                <td rowspan="4">サイン入りブロマイド</td>
+                <td class="dot-btm dashed-btm ">ぽんぽこ</td>
+                <td class="dot-btm dashed-btm text-right" id="TTT_A01">0</td>
+                <td class="text-right" id="TTT_A" rowspan="4">0</td>
+              </tr>
+              <tr>
+                <td class="dashed-btm ">もちひよこ</td>
+                <td class="dashed-btm text-right" id="TTT_A02">0</td>
+              </tr>
+              <tr>
+                <td class="dashed-btm ">さえきやひろ</td>
+                <td class="dashed-btm text-right" id="TTT_A03">0</td>
+              </tr>
+              <tr>
+                <td>星咲ちあ</td>
+                <td class="text-right" id="TTT_A04">0</td>
+              </tr>
+              <tr>
+                <td class="text-center">B</td>
+                <td colspan="2">タペストリー</td>
+                <td class="text-right" id="TTT_B01">0</td>
+                <td class="text-right" id="TTT_B">0</td>
+              </tr>
+              <tr>
+                <td class="text-center">C</td>
+                <td colspan="2">BIGアクリルスタンド</td>
+                <td class="text-right" id="TTT_C01">0</td>
+                <td class="text-right" id="TTT_C">0</td>
+              </tr>
+              <tr>
+                <td class="text-center" rowspan="4">D</td>
+                <td rowspan="4">アクリルスタンド</td>
+                <td class="dashed-btm ">ぽんぽこ</td>
+                <td class="dashed-btm text-right" id="TTT_D01">0</td>
+                <td class="text-right" id="TTT_D" rowspan="4">0</td>
+              </tr>
+              <tr>
+                <td class="dashed-btm ">もちひよこ</td>
+                <td class="dashed-btm text-right" id="TTT_D02">0</td>
+              </tr>
+              <tr>
+                <td class="dashed-btm ">さえきやひろ</td>
+                <td class="dashed-btm text-right" id="TTT_D03">0</td>
+              </tr>
+              <tr>
+                <td>星咲ちあ</td>
+                <td class="text-right" id="TTT_D04">0</td>
+              </tr>
+              <tr>
+                <td class="text-center" rowspan="4">E</td>
+                <td rowspan="4">アクリルキーホルダー</td>
+                <td class="dashed-btm ">ぽんぽこ</td>
+                <td class="dashed-btm text-right" id="TTT_E01">0</td>
+                <td class="text-right" id="TTT_E" rowspan="4">0</td>
+              </tr>
+              <tr>
+                <td class="dashed-btm ">もちひよこ</td>
+                <td class="dashed-btm text-right" id="TTT_E02">0</td>
+              </tr>
+              <tr>
+                <td class="dashed-btm ">さえきやひろ</td>
+                <td class="dashed-btm text-right" id="TTT_E03">0</td>
+              </tr>
+              <tr>
+                <td>星咲ちあ</td>
+                <td class="text-right" id="TTT_E04">0</td>
+              </tr>
+              <tr>
+                <td class="text-center" rowspan="8">F</td>
+                <td rowspan="8">スクエア缶バッジ</td>
+                <td class="dashed-btm ">ぽんぽこ-A</td>
+                <td class="dashed-btm text-right" id="TTT_F01">0</td>
+                <td class="text-right" id="TTT_F" rowspan="8">0</td>
+              </tr>
+              <tr>
+                <td class="dashed-btm ">ぽんぽこ-B</td>
+                <td class="dashed-btm text-right" id="TTT_F02">0</td>
+              </tr>
+              <tr>
+                <td class="dashed-btm ">もちひよこ-A</td>
+                <td class="dashed-btm text-right" id="TTT_F03">0</td>
+              </tr>
+              <tr>
+                <td class="dashed-btm ">もちひよこ-B</td>
+                <td class="dashed-btm text-right" id="TTT_F04">0</td>
+              </tr>
+              <tr>
+                <td class="dashed-btm ">さえきやひろ-A</td>
+                <td class="dashed-btm text-right" id="TTT_F05">0</td>
+              </tr>
+              <tr>
+                <td class="dashed-btm ">さえきやひろ-B</td>
+                <td class="dashed-btm text-right" id="TTT_F06">0</td>
+              </tr>
+              <tr>
+                <td class="dashed-btm ">星咲ちあ-A</td>
+                <td class="dashed-btm text-right" id="TTT_F07">0</td>
+              </tr>
+              <tr>
+                <td>星咲ちあ-B</td>
+                <td class="text-right" id="TTT_F08">0</td>
+              </tr>
+              <tr>
+                <td class="text-center" rowspan="8">G</td>
+                <td rowspan="8">ブロマイド</td>
+                <td class="dashed-btm ">A</td>
+                <td class="dashed-btm text-right" id="TTT_G01">0</td>
+                <td class="text-right" id="TTT_G" rowspan="8">0</td>
+              </tr>
+              <tr>
+                <td class="dashed-btm ">B</td>
+                <td class="dashed-btm text-right" id="TTT_G02">0</td>
+              </tr>
+              <tr>
+                <td class="dashed-btm ">C</td>
+                <td class="dashed-btm text-right" id="TTT_G03">0</td>
+              </tr>
+              <tr>
+                <td class="dashed-btm ">D</td>
+                <td class="dashed-btm text-right" id="TTT_G04">0</td>
+              </tr>
+              <tr>
+                <td class="dashed-btm ">E</td>
+                <td class="dashed-btm text-right" id="TTT_G05">0</td>
+              </tr>
+              <tr>
+                <td class="dashed-btm ">F</td>
+                <td class="dashed-btm text-right" id="TTT_G06">0</td>
+              </tr>
+              <tr>
+                <td class="dashed-btm ">G</td>
+                <td class="dashed-btm text-right" id="TTT_G07">0</td>
+              </tr>
+              <tr>
+                <td>H</td>
+                <td class="text-right" id="TTT_G08">0</td>
+              </tr>
+              <tr>
+                <td class="none-btm-left" colspan="3"></td>
+                <td class="text-right">合計：</td>
+                <td class="text-right" id="TTT_SUM">0</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div style="text-align: center; line-height: 2.5;">
+        <a href="" id="ss" download="ttt_webpon.png">画像として保存</a><br>
+        <a href="https://webpon.net/shop/tetetrain/plan/TTT" target="_blank" rel="noopener noreferrer">もっと引く</a>
+      </div>
+      <hr>
+      <ul>
+        <li>このツールは非公式です。</li>
+        <li>入力されたデータの収集等は一切行っておりません。</li>
+        <li>数が合わない場合は、メールの折り畳まれた部分にコピペ漏れが無いかどうか確認してみてください。</li>
+        <li>B賞以上は未検証です。バグ報告は <a href="https://twitter.com/szkGu" target="_blank" rel="noopener noreferrer">@szkGu</a> まで。</li>
+      </ul>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/dom-to-image@2.6.0/dist/dom-to-image.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
