@@ -78,7 +78,9 @@ const updateTable = () => {
 const updatePng = () => {
     const elem = document.getElementById("table");
     domtoimage.toPng(elem, {
-        bgcolor: "#ffffff"
+        bgcolor: "#ffffff",
+        width: elem.scrollWidth,
+        height: elem.scrollHeight
     }).then(dataUrl => {
         document.getElementById("ss").href = dataUrl;
         //const img = new Image();
